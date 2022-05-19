@@ -1,0 +1,35 @@
+$c-primary: #4A8E16;
+$c-secondary: #214C01;
+$c-special: #F19838;
+$c-border-box: #FFF4E5;
+$c-content: #120e0e;
+
+$font-base: 'Nunito', sans-serif;
+$font-special: 'Rasa', serif; 
+
+
+$spacer-bottom: 70px;
+
+/*pc version - min 800px
+  mobile version - max 799px*/
+
+
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $font-base;
+    margin: 0;
+}
+
+.title {
+    font-family: $font-special;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+
