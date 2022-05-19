@@ -3,11 +3,8 @@ $c-secondary: #214C01;
 $c-special: #F19838;
 $c-border-box: #FFF4E5;
 $c-content: #120e0e;
-
 $font-base: 'Nunito', sans-serif;
 $font-special: 'Rasa', serif; 
-
-
 $spacer-bottom: 70px;
 
 /*pc version - min 800px
@@ -32,4 +29,301 @@ body {
     padding: 0;
 }
 
+/*menu*/
 
+.menu__checkbox {
+    position: absolute;
+    left: -9999px;
+    
+    &:checked ~ .menu__tabs {
+        display: block;
+    }
+}
+
+.menu__toggler {
+    cursor: pointer;
+}
+
+.menu__tabs {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $c-primary;
+    text-transform: uppercase;
+}
+
+.menu__list {
+    border-bottom: 1px solid $c-border-box;
+}
+
+.menu__item {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+   
+    &:hover,
+    &:hover {
+        background-color: $c-secondary;
+    }
+    
+}
+
+.logo {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 50px;
+    }
+    
+    .logo {
+        display: block;
+    }
+    
+    .menu__toggler {
+        display: none;
+    }
+
+    .menu__tabs {
+        background-color: white;
+        display: flex !important;
+        gap: 15px;
+    }
+
+    .menu__list {
+        background-color: $c-primary;
+        border-bottom: 0;
+        text-align: center;
+        width: 135px;
+        padding: 5px 15px;
+        border-radius: 20px;
+
+        &:hover,
+        &:active {
+            background-color: $c-secondary;
+        }
+    }
+
+    .menu__item {
+        padding: 0;
+
+    }
+}
+
+/*banner*/
+
+.banner {
+    display: none;
+
+    @media screen and (min-width: 800px) {
+        display: block;
+        background-image: url("/Images/banner.jpg");
+        background-size: cover;
+        margin-bottom: $spacer-bottom;
+        height: 260px;
+        }
+
+    &__title--big {
+        position: relative;
+        top: 120px;
+        left: -10%;
+        color: white;
+        font-size: 46px;
+        text-align: right;
+
+    }
+}
+
+/*layout*/
+
+.box-hours {
+    color: white;
+    background-color: $c-primary;
+    padding: 20px;
+}
+
+
+.box-hours__title--small {
+    font-size: 28px;
+    text-align: center;
+}
+
+.box-actualities {
+    background-color: $c-special;
+    padding: 20px;
+    margin-bottom: $spacer-bottom;
+}
+
+.box-actualities__title--small {
+    font-size: 28px;
+    text-align: center;
+}
+
+.main-information__content {
+    border: 5px solid $c-border-box;
+    padding: 0 20px;
+    margin-bottom: $spacer-bottom;
+}
+
+.main-information__title--medium {
+    color: $c-secondary;
+    font-size: 34px;
+    text-align: center; 
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.logo-small {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacer-bottom;
+    margin-top: 30px;
+
+    &__logo {
+        max-width: 150px;
+        margin-right: 40px;
+    }
+}
+
+.Outside-photo__shop {
+    max-width: 100%;
+    margin-bottom: $spacer-bottom;
+}
+
+.allergens-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: $spacer-bottom;
+}
+
+.allergens-icons__item {
+    max-width: 100%;
+    border: 2px solid $c-special;
+    border-radius: 50%; 
+}
+
+.brands {
+    margin-bottom: $spacer-bottom;
+    padding: 0 20px;
+
+    ::before {
+        content: "";
+        display: block;
+        height: 2px;;
+        background-color: $c-secondary;
+        margin-bottom: $spacer-bottom;
+    }
+}
+
+.section-logos {
+    display: none;
+}
+
+/*bottom section and footer*/
+
+.options {
+    background-color: $c-primary;
+    color: white;
+    padding: 20px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.footer {
+    background-color: $c-secondary;
+    color: #120e0e;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+
+}
+
+/*Grid layout content*/
+
+@media screen and (min-width: 800px) {
+    .site-layout {
+        display: grid;
+        grid-template-columns: 100px 180px 180px repeat(3, 1fr) 200px;
+        grid-template-rows: 260px auto;
+    }
+
+    .banner {
+        grid-column: 1 / 8;
+        grid-row: 1 / 2;
+    }
+
+    .main-information {
+        grid-column: 3 / 7;
+        grid-row: 2 / 3;
+        border: 5px solid $c-border-box;
+        padding: 20px 20px 20px 0;
+        margin-bottom: $spacer-bottom;
+        margin-top: $spacer-bottom;
+    
+    }
+    .main-information__content {
+        grid-column: 4 / 7;
+        grid-row: 2 / 3;
+        border: none;
+        margin-top: $spacer-bottom;
+    }
+
+
+    .box-hours {
+        background-color: $c-primary;
+        position: relative;
+        left: -115px;
+        width: 240px;
+    }
+
+    .box-actualities {
+        position: relative;
+        left: -115px;
+        bottom: -30px;
+        width: 240px;
+    }
+
+    .Outside-photo {
+        grid-column: 1 / 8;
+        justify-self: center;
+    }
+
+    .Outside-photo__shop {
+        padding: 0 60px;
+        width: 100%;
+    }
+
+    .allergens-icons {
+        grid-column: 3 / 7;
+    }
+
+    .allergens-icons__item {
+        width: 120px;
+        height: 120px;
+        border: 2px solid $c-special;
+    }
+
+    .brands {
+        grid-column: 3 / 7;
+        padding: 0;
+    }
+
+    .section-logos {
+        display: block;
+        grid-column: 3 / 7;
+        margin-bottom: $spacer-bottom;
+    }
+
+    
+
+}
