@@ -1,0 +1,26 @@
+@use 'styles';
+@use 'basic';
+
+.banner {
+    display: none;
+
+    @media screen and (min-width: 1000px) {
+        display: block;
+        background-image: url("/Images/banner.jpg");
+        background-size: cover;
+        margin-bottom: styles.$spacer-bottom;
+        grid-column: 1 / 8;
+        grid-row: 1 / 2;
+        height: 260px;
+        }
+
+    &__title--big {
+        position: relative;
+        top: 120px;
+        left: -10%;
+        color: white;
+        font-size: 46px;
+        text-align: right;
+
+    }
+}

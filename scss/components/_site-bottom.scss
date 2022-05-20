@@ -1,0 +1,25 @@
+@use 'styles';
+@use 'basic';
+
+/*bottom section and footer*/
+
+.options {
+    background-color: styles.$c-primary;
+    color: white;
+    padding: 20px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.footer {
+    background-color: styles.$c-secondary;
+    color: #120e0e;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+
+}
