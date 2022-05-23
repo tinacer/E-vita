@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Rasa:ital,
+    wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+<body>
+    
+    <!--Header with navigation-->
+    <header class="site-header">
+
+        <img class="logo" src="" alt="logo Evita">
+
+        <nav class="menu">
+           <!-- 
+               <div class="menu__mobile-logo"> 
+                Logo 
+            </div>
+            -->
+            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+
+            <label for="menu-checkbox" class="menu__toggler">&#x2630;</label>
+
+            <ul class="menu__tabs">
+                <li class="menu__list"><a class="menu__item" href="/">O nás</a></li>
+				<li class="menu__list"><a class="menu__item" href="/ppl/">Ppl</a></li>
+				<li class="menu__list"><a class="menu__item" href="/zasilkovna/">Zásilkovna</a></li>
+				<li class="menu__list"><a class="menu__item" href="/kontakt/">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <!--Picture banner-->
+        <section class="banner">
+            <h1 class="title banner__title--big">Prodejna zdravé výživy</h1>
+        </section>
+
+
+   {{ content | safe }}
+
+
+    <!--Adress and payment options-->
+    <section class="options">
+        <div class="grid">
+            <div class="grid__column-half">
+                <h3 class="title options__title--small">Adresa</h3>
+
+                <p class="options__content">
+                    Štúrova 1978/8a<br>
+                    Praha 4-Krč<br>
+                    142 00</p>
+            </div>
+
+            <div class="grid__column-half">
+                <h3 class="title options__title--small">Metody platby</h3>
+
+                <p class="options__content">
+                    Hotově<br>
+                    Platba kartou</p>
+
+                <div class="options__icons">
+                    <img class="" src="/Icons/cash.png" alt="hotovost">
+                    <img class="" src="/Icons/card.png" alt="karta">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        © Kristýna Černyševa 2022
+    </footer>
+
+</body>
+</html>

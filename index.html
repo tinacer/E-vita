@@ -1,179 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-vita zdravá výživa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Rasa:ital,
-    wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+---
+layout: main-template.njk
+title: E-vita zdravá výživa
+---
 
+<!--main template-->
 
-<body>
-    
-    <!--Header with navigation-->
-    <header class="site-header">
+<section class="container">
 
-        <img class="logo" src="" alt="logo Evita">
+        <!--Aside boxes with opening hours and actualities-->
+    <aside class="aside-boxes">
 
-        <nav class="menu">
-           <!-- 
-               <div class="menu__mobile-logo"> 
-                Logo 
+        <div class="box-hours">
+
+            <h3 class="title box-hours__title--small">Otevírací doba</h3>
+            <div class="grid box-hours__content">
+                <div class="grid__column-half box-hours__days">
+                    <p>
+                    Pondělí<br>
+                    Úterý<br>
+                    Středa<br>
+                    Čtvrtek<br>
+                    Pátek<br>
+                    Sobota<br>
+                    Neděle
+                    </p>
+                </div>
+
+                <div class="grid__column-half box-hours__hours">
+                    <p>
+                    10:00-18:00<br>
+                    10:00-18:00<br>
+                    10:00-18:00<br>
+                    10:00-18:00<br>
+                    10:00-18:00<br>
+                    Zavřeno<br>
+                    Zavřeno
+                    </p>
+                </div>
             </div>
-            -->
-            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-
-            <label for="menu-checkbox" class="menu__toggler">&#x2630;</label>
-            <ul class="menu__tabs">
-                <li class="menu__list"><a class="menu__item" href="#">O nás</a></li>
-				<li class="menu__list"><a class="menu__item" href="#">Ppl</a></li>
-				<li class="menu__list"><a class="menu__item" href="#">Zásilkovna</a></li>
-				<li class="menu__list"><a class="menu__item" href="#">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="site-layout">
-
-        <!--Picture banner-->
-        <section class="banner">
-            <h1 class="title banner__title--big">Prodejna zdravé výživy</h1>
-        </section>
-
-        <!--main template-->
-       
-        <section class="container">
-
-             <!--Aside boxes with opening hours and actualities-->
-            <aside class="aside-boxes">
-
-                <div class="box-hours">
-
-                    <h3 class="title box-hours__title--small">Otevírací doba</h3>
-                    <div class="grid box-hours__content">
-                        <div class="grid__column-half box-hours__days">
-                            <p>
-                            Pondělí
-                            Úterý
-                            Středa
-                            Čtvrtek
-                            Pátek
-                            Sobota
-                            Neděle
-                            </p>
-                        </div>
-
-                        <div class="grid__column-half box-hours__hours">
-                            <p>
-                            10:00-18:00
-                            10:00-18:00
-                            10:00-18:00
-                            10:00-18:00
-                            10:00-18:00
-                            Zavřeno
-                            Zavřeno
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="box-actualities">
-                    <h3 class="title box-actualities__title--small">Aktuality</h3>
-                    <p class="box-actualities__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur est earum ea accusantium pariatur non</p>
-                </div>
-            </aside> 
-        </section>
-
-            <section class="main-information">
-
-                <h2 class="title main-information__title--medium">Prodejna zdravé výživy E-vita</h2>
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tempore inventore accusamus deleniti cupiditate ducimus
-                    quod optio tenetur debitis aperiam possimus neque autem minima doloremque temporibus quam, magnam aut dolores?</p>
-
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse sequi quia praesentium provident vitae
-                    inventore voluptas reiciendis iusto corporis cupiditate non vero laboriosam, architecto ullam! Ullam esse non magnam repellat!
-                    Cupiditate omnis dicta aperiam nobis alias aliquid voluptas officiis ex illum quos blanditiis cum quae corporis officia
-                    aliquam dolorem laudantium, harum laboriosam eaque necessitatibus doloribus! Aliquid earum cupiditate minus obcaecati!</p>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam rem, eius fuga voluptatum sed suscipit expedita. 
-                    Dolorum ipsa voluptates consequuntur itaque doloremque, placeat eligendi reiciendis laboriosam cum incidunt dicta.
-                    it nostrum quaerat nemo, deserunt quibusdam recusandae ea consequuntur dolorum quod.</p>
-                    
-                    <div class="logo-small">
-                        <a href="#">
-                            <img class="logo-small__logo" src="Images/ppl-logo.png" alt="logo PPL">
-                        </a>
-
-                        <a href="#">
-                            <img class="logo-small__logo" src="Images/zasilkovna-logo.png" alt="logo Zásilkovna">
-                        </a>
-                    </div>
-                </section>
-
-        <section class="Outside-photo">
-            <img class="Outside-photo__shop" src="Images/obchod.jpg" alt="Obchod">
-        </section>
-
-        <section class="allergens-icons">
-                <img class="allergens-icons__item allergens-icons__sugar" src="Icons/Sugar_free.png" alt="Bez cukru">
-                <img class="allergens-icons__item allergens-icons__gluten" src="Icons/No_gluten.png" alt="Bez glutamátu">
-                <img class="allergens-icons__item allergens-icons__dairy" src="Icons/Dairy.png" alt="Bez laktózy">
-        </section>
-         
-        <div class="brands">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates error suscipit dolorem recusandae
-            ullam porro animi vero magnam? Quis laudantium tempore at fugit omnis magni vero reprehenderit doloribus eum tenetur!</p>
         </div>
 
-        <!--Brand logos-->
-        <section class="section-logos">
-            <img src="" alt="Obchod">
-            <img src="" alt="Obchod">
-            <img src="" alt="Obchod">
-            <img src="" alt="Obchod">
-            <img src="" alt="Obchod">
-            <img src="" alt="Obchod">
-            <img src="" alt="Obchod">
-            <img src="" alt="Obchod"> 
-        </section>
-    </main>
+        <div class="box-actualities">
+            <h3 class="title box-actualities__title--small">Aktuality</h3>
+            <p class="box-actualities__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur est earum ea accusantium pariatur non</p>
+        </div>
+    </aside> 
+</section>
+
+<section class="main-information">
+
+    <h2 class="title main-information__title--medium">Prodejna zdravé výživy E-vita</h2>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tempore inventore accusamus deleniti cupiditate ducimus
+        quod optio tenetur debitis aperiam possimus neque autem minima doloremque temporibus quam, magnam aut dolores?</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse sequi quia praesentium provident vitae
+        inventore voluptas reiciendis iusto corporis cupiditate non vero laboriosam, architecto ullam! Ullam esse non magnam repellat!
+        Cupiditate omnis dicta aperiam nobis alias aliquid voluptas officiis ex illum quos blanditiis cum quae corporis officia
+        aliquam dolorem laudantium, harum laboriosam eaque necessitatibus doloribus! Aliquid earum cupiditate minus obcaecati!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam rem, eius fuga voluptatum sed suscipit expedita. 
+        Dolorum ipsa voluptates consequuntur itaque doloremque, placeat eligendi reiciendis laboriosam cum incidunt dicta.
+        it nostrum quaerat nemo, deserunt quibusdam recusandae ea consequuntur dolorum quod.</p>
+        
+        <div class="logo-small">
+            <a href="/ppl/">
+                <img class="logo-small__logo" src="Images/ppl-logo.png" alt="logo PPL">
+            </a>
+
+            <a href="/zásilkovna/">
+                <img class="logo-small__logo" src="Images/zasilkovna-logo.png" alt="logo Zásilkovna">
+            </a>
+        </div>
+</section>
+
+<section class="Outside-photo">
+    <img class="Outside-photo__shop" src="Images/obchod.jpg" alt="Obchod">
+</section>
+
+<section class="allergens-icons">
+        <img class="allergens-icons__item allergens-icons__sugar" src="Icons/Sugar_free.png" alt="Bez cukru">
+        <img class="allergens-icons__item allergens-icons__gluten" src="Icons/No_gluten.png" alt="Bez glutamátu">
+        <img class="allergens-icons__item allergens-icons__dairy" src="Icons/Dairy.png" alt="Bez laktózy">
+</section>
+    
+    <div class="brands">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates error suscipit dolorem recusandae
+        ullam porro animi vero magnam? Quis laudantium tempore at fugit omnis magni vero reprehenderit doloribus eum tenetur!</p>
+    </div>
+
+<!--Brand logos-->
+<section class="section-logos">
+    <img src="" alt="Obchod">
+    <img src="" alt="Obchod">
+    <img src="" alt="Obchod">
+    <img src="" alt="Obchod">
+    <img src="" alt="Obchod">
+    <img src="" alt="Obchod">
+    <img src="" alt="Obchod">
+    <img src="" alt="Obchod"> 
+</section>
+
    
 
-    <!--Adress and payment options-->
-    <section class="options">
-        <div class="grid">
-            <div class="grid__column-half">
-                <h3 class="title options__title--small">Adresa</h3>
-
-                <p class="options__content">
-                    Štúrova 1978/8a<br>
-                    Praha 4-Krč<br>
-                    142 00</p>
-            </div>
-
-            <div class="grid__column-half">
-                <h3 class="title options__title--small">Metody platby</h3>
-
-                <p class="options__content">
-                    Hotově<br>
-                    Platba kartou</p>
-
-                <div class="options__icons">
-                    <img class="" src="Icons/cash.png" alt="hotovost">
-                    <img class="" src="Icons/card.png" alt="karta">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Footer-->
-    <footer class="footer">
-        © Kristýna Černyševa 2022
-    </footer>
-
-</body>
-</html>
