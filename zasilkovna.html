@@ -7,25 +7,22 @@ title: E-vita zdravá výživa
 
 <section class="postal-service">
     
-    <div class="postal-service__content"></div>
-
-        <h2 class="title postal-service__title--medium">PPL parcelshop</h2>
-
+    <div class="postal-service__content">
+        <h2 class="title postal-service__title--medium">Zásilkovna</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut et a, viverra condimentum.
         Cursus sit enim tincidunt tempor nunc placerat id risus. Sit neque commodo eu ac egestas iaculis ridiculus risus. Massa, vitae ultrices nulla scelerisque eu, elit, viverra.</p>
     </div>  
     
     <div class="postal-service__photo">
-       <img class="photo-zasilkovna--big" src="/Images/Zásilkovna-big.png" alt="velké logo zásilkovna">
+       <img class="postal-service__photo--big photo-zasilkovna--big" src="/Images/Zásilkovna-big.png" alt="velké logo zásilkovna">
     </div>
-    
 
-    <form action="https://www.ppl.cz/vyhledat-zasilku">
-        <input type=text name="shipmentId" id="barcode">
+</section>
 
-        <label for="barcode">Kód zásilky</label> 
+<section class="service-form">
+    <form action="https://tracking.packeta.com/cs/tracking/search?det=%C4%8D%C3%ADslo+z%C3%A1silky" target="_blank">
+        <input type="text" class="service-form__input" name="id" id="id" placeholder="Číslo zásilky">
+        <button type="submit" class="input-button">vyhledat zásilku</button>
     </form>
-
-    <button class="input-text__button"> </button>
 
 </section>

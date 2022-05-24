@@ -1,6 +1,10 @@
-@use 'styles';
-@use 'basic';
-@use 'menu';
+@use  "../scss/base/styles";
+@use "../scss/base/basic";
+@use "../scss/components/menu";
+@use "../scss/components/site-bottom";
+@use "../scss/components/banner";
+
+
 
 /*pc version - min 1000px
   mobile version - max 999px*/
@@ -34,7 +38,7 @@
     padding: 20px;
 
     &__title--small {
-        font-size: 28px;
+        font-size: 24px;
         text-align: center;
     }
 
@@ -43,6 +47,7 @@
         position: relative;
         left: -115px;
         width: 240px;  
+        border-radius: 3px;
     }
 }
 
@@ -53,7 +58,7 @@
     margin-bottom: styles.$spacer-bottom;
 
     &__title--small {
-        font-size: 28px;
+        font-size: 24px;
         text-align: center;
     }
 
@@ -62,6 +67,7 @@
         left: -115px;
         bottom: -30px;
         width: 240px;
+        border-radius: 3px;
     }
 
 }
@@ -73,7 +79,7 @@
 
     &__title--medium {
         color: styles.$c-secondary;
-        font-size: 34px;
+        font-size: 38px;
         text-align: center; 
         margin-bottom: 30px;
         margin-top: 40px;
@@ -92,10 +98,10 @@
     justify-content: center;
     margin-bottom: styles.$spacer-bottom;
     margin-top: 30px;
-    padding-left: 15px;
+    gap: 20px;
 
     &__logo {
-        margin-right: 40px;
+        width: 100%;
     }
 }
 
@@ -168,8 +174,8 @@
     }
 
     .allergens-icons__item {
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
         border: 2px solid styles.$c-special;
     }
 
@@ -187,6 +193,101 @@
 }
 
 
+
+/* PPL site and Zasilkovna site*/
+
+.postal-service {
+    margin: 0 20px;
+
+    @media screen and (min-width: 1000px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:50px;
+    }
+
+    &__content {
+        margin-bottom: styles.$spacer-bottom;
+
+        @media screen and (min-width: 1000px) {
+            flex-basis: 40%;
+            
+        }
+
+    }
+
+
+    &__title--medium {
+        color: styles.$c-secondary;
+        font-size: 38px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+     
+     &__photo {
+     max-width: 465px;
+     margin-bottom: styles.$spacer-bottom;
+    } 
+
+     &__photo--big {
+         width: 100%;
+     }
+
+    
+}
+
+
+.service-form {
+    display:block;
+    max-width: 200px;
+    margin-left: 20px;
+    
+    &__input {
+        border: 1px solid #777777;
+        border-radius: 2px;
+        padding: 5px;
+
+        &:focus {
+            outline: 0;
+            border: 2px solid styles.$c-special;
+        }
+
+    }
+
+    @media screen and (min-width:1000px) {
+        margin: 0 auto;
+    }
+   
+}
+
+
+
+/*button*/
+
+.input-button {
+    cursor: pointer;
+    display:block;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: styles.$c-special;
+    padding: 10px 15px;
+    border: 1px solid styles.$c-special;
+    border-radius: 20px;
+    margin-bottom: styles.$spacer-bottom;
+    margin-top: 30px;
+
+    &:hover,
+    &:focus {
+        color: white;
+        background-color: #F36900;
+    }
+
+    @media screen and (min-width:1000px) {
+        margin-left: 5px;
+        
+    }
+}
 
 
 

@@ -1,5 +1,6 @@
-@use 'styles';
-@use 'basic';
+@use "../base/styles";
+@use "../base/basic";
+
 
 .banner {
     display: none;
@@ -16,7 +17,7 @@
 
     &__title--big {
         position: relative;
-        top: 120px;
+        top: 132px;
         left: -10%;
         color: white;
         font-size: 46px;
