@@ -40,6 +40,20 @@
             <h1 class="title banner__title--big">Prodejna zdravé výživy</h1>
         </section>
 
+        <!--main template-->
+
+    <section class="container">
+
+        <!--Aside boxes with opening hours and actualities-->
+        <aside class="aside-boxes">
+
+        {% include 'hours-box.njk' %}
+
+        {% include 'actualities-box.njk' %}
+
+        </aside> 
+    </section>
+
 
    {{ content | safe }}
 
