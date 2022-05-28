@@ -6,31 +6,10 @@
 
 
 
-/*pc version - min 1000px
-  mobile version - max 999px*/
+//pc version - min 1000px, mobile version - max 999px
 
 
-/*menu*/
-
-/*@media screen and (max-width: 999px) {
-    .menu {
-        display:flex;
-        justify-content: space-between;
-        height: 50px;
-        padding: 15px;
-        border: 2px solid $c-primary;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .menu__mobile-logo {
-        display: none;
-    }
-}*/
-
-
-
-/*layout*/
+/*layout box with actualities and opening hours*/
 
 .box-hours {
     color: white;
@@ -47,13 +26,13 @@
         position: relative;
         left: -115px;
         width: 240px;  
-        border-radius: 3px;
+        border-radius: 0 10% 0 0;
     }
 }
 
-
 .box-actualities {
     background-color: styles.$c-special;
+    text-align: center;
     padding: 20px;
     margin-bottom: styles.$spacer-bottom;
 
@@ -67,7 +46,7 @@
         left: -115px;
         bottom: -30px;
         width: 240px;
-        border-radius: 3px;
+        border-radius: 0 0 10% 20%;
     }
 
 }
@@ -194,7 +173,7 @@
 
 
 
-/* PPL site and Zasilkovna site*/
+/* PPL page and Zasilkovna page*/
 
 .postal-service {
     margin: 0 20px;
@@ -211,6 +190,10 @@
 
         @media screen and (min-width: 1000px) {
             flex-basis: 30%;
+            background-color: styles.$c-border-box;
+            padding: 0 20px 50px 50px;
+            box-shadow: 2px 2px 4px #e7e7e7;
+            border-radius: 5px 0 5px 40%;
             
         }
 
@@ -261,8 +244,6 @@
    
 }
 
-
-
 /*button*/
 
 .input-button {
@@ -270,6 +251,7 @@
     display:block;
     text-transform: uppercase;
     text-align: center;
+    color: white;
     background-color: styles.$c-special;
     padding: 10px 15px;
     border: 1px solid styles.$c-special;
@@ -279,33 +261,36 @@
 
     &:hover,
     &:focus {
-        color: white;
         background-color: #F36900;
     }
 
     @media screen and (min-width:1000px) {
-        margin-left: 5px;
+        margin-left: 10px;
         
     }
 }
 
-/*contact site with map*/
+/*contact page with map*/
 .main-information__contact {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap:40px;
-    padding: 40px 0 40px 0;
+    gap:50px;
+    padding: 20px 0;
+
+    &-address {
+        margin: 0;
+    }
 }
 
 .main-information__title-contact--medium {
     margin-bottom: 15px;
     color: styles.$c-secondary;
-    font-size: 38px;
+    font-size: 32px;
 }
 
-.main-information__contact-icons {
+.contact-icons {
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -318,10 +303,6 @@
     
 }
 
-.main-information__contact-address {
-    margin: 0;
-}
-
 .contact-logo {
     height: 45px;
 }
@@ -330,5 +311,7 @@
     grid-column: 1 / 8;
     height: 300px;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 

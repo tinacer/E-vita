@@ -1,100 +1,113 @@
 @use "../base/styles";
 @use "../base/basic";
 
-
-.menu__checkbox {
-    position: absolute;
-    left: -9999px;
-    
-    &:checked ~ .menu__tabs {
-        display: block;
-    }
-}
-
-.menu__toggler {
-    cursor: pointer;
-}
-
-.menu__tabs {
-    display: none;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: styles.$c-primary;
-    text-transform: uppercase;
-}
-
-.menu__list {
-    border-bottom: 1px solid styles.$c-border-box;
-}
-
-.menu__item {
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    color: white;
-   
-    &:hover {
-        background-color: styles.$c-secondary;
-    }
-    
-}
-
-
-.site-header {
+/*.site-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    
+}*/
+
+.site-header{
     border: 2px solid styles.$c-primary;
+
+    @media screen and (min-width: 1000px) {
+        display: flex;
+        justify-content: space-between;
+        border: 0;
+        align-items: flex-end;
+        padding: 30px 50px; 
+    }
+}
+
+
+.menu {
+
+    &__checkbox {
+        position: absolute;
+        left: -9999px;
+        
+        &:checked ~ .menu__tabs {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__toggler {
+        cursor: pointer;
+        float: right;
+        position: relative;
+        top: -50px;
+
+        @media screen and (min-width: 1000px) {
+            display: none;
+        }
+    }
+
+    &__tabs {
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: styles.$c-primary;
+        text-transform: uppercase;
+
+        @media screen and (min-width: 1000px) {
+            background-color: white;
+            display: flex !important;
+            gap: 15px;
+        }
+    }
+
+    &__list {
+        border-bottom: 1px solid styles.$c-border-box;
+
+        @media screen and (min-width: 1000px) {
+            background-color: styles.$c-primary;
+            border-bottom: 0;
+            text-align: center;
+            width: 135px;
+            padding: 5px 15px;
+            border-radius: 20px;
+
+            &:hover {
+                background-color: styles.$c-secondary;
+            }  
+        }
+    }
+
+    &__item {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+    
+        &:hover {
+            background-color: styles.$c-secondary;
+        }
+
+        @media screen and (min-width: 1000px) {
+            padding: 0;   
+        }
+
+    }
 }
 
 .hamburger-menu {
-    width: 100%;
+    max-width: 80px;
+    width: 100%;   
+    position: relative;
+
 }
 
 .logo {
-    order: 1;
     max-width: 120px;
     width: 100%;
     padding-top: 10px;
     padding-left: 10px;
-}
-@media screen and (min-width: 1000px) {
-    .site-header {
-        border: 0;
-        align-items: flex-end;
-        padding: 30px 50px;
-    }
-    
-    .logo {
+
+    @media screen and (min-width: 1000px) {
         display: block;
         max-width:200px;
-    }
-    
-    .menu__toggler {
-        display: none;
-    }
-
-    .menu__tabs {
-        background-color: white;
-        display: flex !important;
-        gap: 15px;
-    }
-
-    .menu__list {
-        background-color: styles.$c-primary;
-        border-bottom: 0;
-        text-align: center;
-        width: 135px;
-        padding: 5px 15px;
-        border-radius: 20px;
-
-        &:hover {
-            background-color: styles.$c-secondary;
-        }
-    }
-
-    .menu__item {
-        padding: 0;
     }
 }

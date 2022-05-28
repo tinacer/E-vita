@@ -21,18 +21,44 @@ body {
   padding: 0;
 }
 
+/*.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}*/
+.site-header {
+  border: 2px solid #4A8E16;
+}
+@media screen and (min-width: 1000px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    align-items: flex-end;
+    padding: 30px 50px;
+  }
+}
+
 .menu__checkbox {
   position: absolute;
   left: -9999px;
 }
 .menu__checkbox:checked ~ .menu__tabs {
   display: block;
+  width: 100%;
 }
-
 .menu__toggler {
   cursor: pointer;
+  float: right;
+  position: relative;
+  top: -50px;
 }
-
+@media screen and (min-width: 1000px) {
+  .menu__toggler {
+    display: none;
+  }
+}
 .menu__tabs {
   display: none;
   margin: 0;
@@ -41,62 +67,17 @@ body {
   background-color: #4A8E16;
   text-transform: uppercase;
 }
-
-.menu__list {
-  border-bottom: 1px solid #FFF4E5;
-}
-
-.menu__item {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: white;
-}
-.menu__item:hover {
-  background-color: #214C01;
-}
-
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border: 2px solid #4A8E16;
-}
-
-.hamburger-menu {
-  width: 100%;
-}
-
-.logo {
-  order: 1;
-  max-width: 120px;
-  width: 100%;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
 @media screen and (min-width: 1000px) {
-  .site-header {
-    border: 0;
-    align-items: flex-end;
-    padding: 30px 50px;
-  }
-
-  .logo {
-    display: block;
-    max-width: 200px;
-  }
-
-  .menu__toggler {
-    display: none;
-  }
-
   .menu__tabs {
     background-color: white;
     display: flex !important;
     gap: 15px;
   }
-
+}
+.menu__list {
+  border-bottom: 1px solid #FFF4E5;
+}
+@media screen and (min-width: 1000px) {
   .menu__list {
     background-color: #4A8E16;
     border-bottom: 0;
@@ -108,11 +89,41 @@ body {
   .menu__list:hover {
     background-color: #214C01;
   }
-
+}
+.menu__item {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+.menu__item:hover {
+  background-color: #214C01;
+}
+@media screen and (min-width: 1000px) {
   .menu__item {
     padding: 0;
   }
 }
+
+.hamburger-menu {
+  max-width: 80px;
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  max-width: 120px;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+@media screen and (min-width: 1000px) {
+  .logo {
+    display: block;
+    max-width: 200px;
+  }
+}
+
 /*bottom section and footer*/
 .options {
   background-color: #4A8E16;
@@ -155,28 +166,10 @@ body {
   color: white;
   font-size: 64px;
   text-align: right;
-  text-shadow: 2px 2px 4px #2c2a2a;
+  text-shadow: 0px 2px 2px #464545;
 }
 
-/*pc version - min 1000px
-  mobile version - max 999px*/
-/*menu*/
-/*@media screen and (max-width: 999px) {
-    .menu {
-        display:flex;
-        justify-content: space-between;
-        height: 50px;
-        padding: 15px;
-        border: 2px solid $c-primary;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .menu__mobile-logo {
-        display: none;
-    }
-}*/
-/*layout*/
+/*layout box with actualities and opening hours*/
 .box-hours {
   color: white;
   background-color: #4A8E16;
@@ -192,12 +185,13 @@ body {
     position: relative;
     left: -115px;
     width: 240px;
-    border-radius: 3px;
+    border-radius: 0 10% 0 0;
   }
 }
 
 .box-actualities {
   background-color: #F19838;
+  text-align: center;
   padding: 20px;
   margin-bottom: 70px;
 }
@@ -211,7 +205,7 @@ body {
     left: -115px;
     bottom: -30px;
     width: 240px;
-    border-radius: 3px;
+    border-radius: 0 0 10% 20%;
   }
 }
 
@@ -329,7 +323,7 @@ body {
     margin-bottom: 70px;
   }
 }
-/* PPL site and Zasilkovna site*/
+/* PPL page and Zasilkovna page*/
 .postal-service {
   margin: 0 20px;
 }
@@ -347,6 +341,10 @@ body {
 @media screen and (min-width: 1000px) {
   .postal-service__content {
     flex-basis: 30%;
+    background-color: #FFF4E5;
+    padding: 0 20px 50px 50px;
+    box-shadow: 2px 2px 4px #e7e7e7;
+    border-radius: 5px 0 5px 40%;
   }
 }
 .postal-service__title--medium {
@@ -389,6 +387,7 @@ body {
   display: block;
   text-transform: uppercase;
   text-align: center;
+  color: white;
   background-color: #F19838;
   padding: 10px 15px;
   border: 1px solid #F19838;
@@ -397,32 +396,34 @@ body {
   margin-top: 30px;
 }
 .input-button:hover, .input-button:focus {
-  color: white;
   background-color: #F36900;
 }
 @media screen and (min-width: 1000px) {
   .input-button {
-    margin-left: 5px;
+    margin-left: 10px;
   }
 }
 
-/*contact site with map*/
+/*contact page with map*/
 .main-information__contact {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding: 40px 0 40px 0;
+  gap: 50px;
+  padding: 20px 0;
+}
+.main-information__contact-address {
+  margin: 0;
 }
 
 .main-information__title-contact--medium {
   margin-bottom: 15px;
   color: #214C01;
-  font-size: 38px;
+  font-size: 32px;
 }
 
-.main-information__contact-icons {
+.contact-icons {
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -434,10 +435,6 @@ body {
   color: #120e0e;
 }
 
-.main-information__contact-address {
-  margin: 0;
-}
-
 .contact-logo {
   height: 45px;
 }
@@ -446,4 +443,6 @@ body {
   grid-column: 1/8;
   height: 300px;
   width: 100%;
+  padding: 0;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
