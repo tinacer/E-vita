@@ -1,12 +1,6 @@
 @use "../base/styles";
 @use "../base/basic";
 
-/*.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    
-}*/
 
 .site-header{
     border: 2px solid styles.$c-primary;
