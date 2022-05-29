@@ -8,6 +8,43 @@
 
 //pc version - min 1000px, mobile version - max 999px
 
+/*Grid layout content*/
+
+@media screen and (min-width: 1000px) {
+    .site-layout {
+        display: grid;
+        grid-template-columns: 100px 180px 180px repeat(3, 1fr) 200px;
+        grid-template-rows: 260px auto;
+    }
+
+    .container {
+        grid-column: 3 / 7;
+        grid-row: 2 / 3;
+        border: 5px solid styles.$c-border-box;
+        padding: 20px 20px 20px 0;
+        margin-bottom: styles.$spacer-bottom;
+        margin-top: styles.$spacer-bottom;
+    }
+
+    .Outside-photo {
+        grid-column: 1 / 8;
+        justify-self: center;
+   
+
+        &__shop {
+            padding: 0 60px;
+            width: 100%;
+        }
+    }
+
+    .section-logos {
+        display: block;
+        grid-column: 3 / 7;
+        margin-bottom: styles.$spacer-bottom;
+    }
+
+}
+
 
 /*layout box with actualities and opening hours*/
 
@@ -32,6 +69,7 @@
 
 .box-actualities {
     background-color: styles.$c-special;
+    color: white;
     text-align: center;
     padding: 20px;
     margin-bottom: styles.$spacer-bottom;
@@ -75,6 +113,7 @@
 .logo-small {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: styles.$spacer-bottom;
     margin-top: 30px;
     gap: 20px;
@@ -84,6 +123,8 @@
     }
 }
 
+
+/*section with photo and icons*/
 .Outside-photo__shop {
     max-width: 100%;
     margin-bottom: styles.$spacer-bottom;
@@ -94,12 +135,25 @@
     justify-content: center;
     gap: 30px;
     margin-bottom: styles.$spacer-bottom;
+
+    @media screen and (min-width: 1000px) {
+        grid-column: 1 / 8;
+        justify-content: center;
+        gap: 50px;
+        
+    }
 }
 
 .allergens-icons__item {
     max-width: 100%;
     border: 1px solid styles.$c-special;
     border-radius: 50%; 
+
+    @media screen and (min-width: 1000px) {
+            width: 90px;
+            height: 90px;
+            border: 2px solid styles.$c-special;
+    }
 }
 
 .brands {
@@ -113,63 +167,17 @@
         background-color: styles.$c-secondary;
         margin-bottom: styles.$spacer-bottom;
     }
+
+    @media screen and (min-width: 1000px) {
+            grid-column: 3 / 7;
+            padding: 0;
+    }
 }
 
 .section-logos {
     display: none;
 }
 
-
-/*Grid layout content*/
-
-@media screen and (min-width: 1000px) {
-    .site-layout {
-        display: grid;
-        grid-template-columns: 100px 180px 180px repeat(3, 1fr) 200px;
-        grid-template-rows: 260px auto;
-    }
-
-    .container {
-        grid-column: 3 / 7;
-        grid-row: 2 / 3;
-        border: 5px solid styles.$c-border-box;
-        padding: 20px 20px 20px 0;
-        margin-bottom: styles.$spacer-bottom;
-        margin-top: styles.$spacer-bottom;
-    }
-
-    .Outside-photo {
-        grid-column: 1 / 8;
-        justify-self: center;
-    }
-
-    .Outside-photo__shop {
-        padding: 0 60px;
-        width: 100%;
-    }
-
-    .allergens-icons {
-        grid-column: 3 / 7;
-    }
-
-    .allergens-icons__item {
-        width: 90px;
-        height: 90px;
-        border: 2px solid styles.$c-special;
-    }
-
-    .brands {
-        grid-column: 3 / 7;
-        padding: 0;
-    }
-
-    .section-logos {
-        display: block;
-        grid-column: 3 / 7;
-        margin-bottom: styles.$spacer-bottom;
-    }
-
-}
 
 
 
@@ -196,7 +204,6 @@
             border-radius: 5px 0 5px 40%;
             
         }
-
     }
 
 
@@ -215,9 +222,7 @@
 
      &__photo--big {
          width: 100%;
-     }
-
-    
+     }  
 }
 
 
@@ -265,8 +270,7 @@
     }
 
     @media screen and (min-width:1000px) {
-        margin-left: 5px;
-        
+        margin-left: 5px;   
     }
 }
 

@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy("css");
 
+  eleventyConfig.addPassthroughCopy("admin");
+
   return {
     
     templateFormats: ["njk", "html", "md", "liquid"],
