@@ -3,14 +3,15 @@
 
 
 .site-header{
-    border: 2px solid styles.$c-primary;
+    box-shadow: 0 0 3px styles.$c-primary;
+
 
     @media screen and (min-width: 1000px) {
         display: flex;
         justify-content: space-between;
-        border: 0;
+        box-shadow: none;
         align-items: flex-end;
-        padding: 30px 50px; 
+        padding: 30px 50px;
     }
 }
 
@@ -60,12 +61,15 @@
             background-color: styles.$c-primary;
             border-bottom: 0;
             text-align: center;
-            width: 135px;
+            width: 125px;
             padding: 5px 15px;
-            border-radius: 20px;
+            border-radius: 3px 20px;
+            transition-property: all;
+            transition-duration: 0.1s;
 
             &:hover {
                 background-color: styles.$c-secondary;
+                transform: skew(-10deg);
             }  
         }
     }
@@ -103,5 +107,10 @@
     @media screen and (min-width: 1000px) {
         display: block;
         max-width:200px;
+
+        &:hover {
+            transform: scale(1.05);
+
+        }
     }
 }

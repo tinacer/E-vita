@@ -8,6 +8,8 @@
     @media screen and (min-width: 1000px) {
         display: block;
         background-image: url("/Images/banner.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: cover;
         margin-bottom: styles.$spacer-bottom;
         grid-column: 1 / 8;
@@ -18,10 +20,19 @@
     &__title--big {
         position: relative;
         top: 132px;
-        left: -10%;
+        left: -5%;
         color: white;
         font-size: 64px;
         text-align: right;
         text-shadow: 0px 2px 2px #464545;
+        animation-name: title-move;
+        animation-duration: 3s;
+
+        
     }
+}
+
+@keyframes title-move {
+    from { transform: translate(9999px, 0); }
+    to { transform: translate(0, 0); }
 }

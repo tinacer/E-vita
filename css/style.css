@@ -17,18 +17,19 @@ body {
 .title {
   font-family: "Rasa", serif;
   font-style: italic;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
 .site-header {
-  border: 2px solid #4A8E16;
+  box-shadow: 0 0 3px #4A8E16;
 }
 @media screen and (min-width: 1000px) {
   .site-header {
     display: flex;
     justify-content: space-between;
-    border: 0;
+    box-shadow: none;
     align-items: flex-end;
     padding: 30px 50px;
   }
@@ -76,12 +77,15 @@ body {
     background-color: #4A8E16;
     border-bottom: 0;
     text-align: center;
-    width: 135px;
+    width: 125px;
     padding: 5px 15px;
-    border-radius: 20px;
+    border-radius: 3px 20px;
+    transition-property: all;
+    transition-duration: 0.1s;
   }
   .menu__list:hover {
     background-color: #214C01;
+    transform: skew(-10deg);
   }
 }
 .menu__item {
@@ -116,6 +120,9 @@ body {
     display: block;
     max-width: 200px;
   }
+  .logo:hover {
+    transform: scale(1.05);
+  }
 }
 
 /*bottom section and footer*/
@@ -146,6 +153,8 @@ body {
   .banner {
     display: block;
     background-image: url("/Images/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     margin-bottom: 70px;
     grid-column: 1/8;
@@ -156,13 +165,34 @@ body {
 .banner__title--big {
   position: relative;
   top: 132px;
-  left: -10%;
+  left: -5%;
   color: white;
   font-size: 64px;
   text-align: right;
   text-shadow: 0px 2px 2px #464545;
+  -webkit-animation-name: title-move;
+          animation-name: title-move;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
+@-webkit-keyframes title-move {
+  from {
+    transform: translate(9999px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes title-move {
+  from {
+    transform: translate(9999px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
 /*Grid layout content*/
 @media screen and (min-width: 1000px) {
   .site-layout {
@@ -180,15 +210,6 @@ body {
     margin-top: 70px;
   }
 
-  .Outside-photo {
-    grid-column: 1/8;
-    justify-self: center;
-  }
-  .Outside-photo__shop {
-    padding: 0 60px;
-    width: 100%;
-  }
-
   .section-logos {
     display: block;
     grid-column: 3/7;
@@ -196,6 +217,22 @@ body {
   }
 }
 /*layout box with actualities and opening hours*/
+@-webkit-keyframes aside-move {
+  from {
+    transform: translate(-9999px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes aside-move {
+  from {
+    transform: translate(-9999px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
 .box-hours {
   color: white;
   background-color: #4A8E16;
@@ -211,7 +248,9 @@ body {
     position: relative;
     left: -115px;
     width: 240px;
-    border-radius: 0 10% 0 0;
+    border-radius: 3px 40px;
+    -webkit-animation: aside-move 2s;
+            animation: aside-move 2s;
   }
 }
 
@@ -221,10 +260,7 @@ body {
   text-align: center;
   padding: 20px;
   margin-bottom: 70px;
-}
-.box-actualities__title--small {
-  font-size: 24px;
-  text-align: center;
+  order: 2;
 }
 @media screen and (min-width: 1000px) {
   .box-actualities {
@@ -232,7 +268,9 @@ body {
     left: -115px;
     bottom: -30px;
     width: 240px;
-    border-radius: 0 0 20px 20px;
+    border-radius: 40px 3px;
+    -webkit-animation: aside-move 2s;
+            animation: aside-move 2s;
   }
 }
 
@@ -266,12 +304,22 @@ body {
   gap: 20px;
 }
 .logo-small__logo {
+  max-width: 170px;
   width: 100%;
 }
 
 /*section with photo and icons*/
+.Outside-photo {
+  padding: 0 20px;
+}
+@media screen and (min-width: 1000px) {
+  .Outside-photo {
+    grid-column: 3/7;
+    padding: 0 0;
+  }
+}
 .Outside-photo__shop {
-  max-width: 100%;
+  width: 100%;
   margin-bottom: 70px;
 }
 
@@ -285,7 +333,7 @@ body {
   .allergens-icons {
     grid-column: 1/8;
     justify-content: center;
-    gap: 50px;
+    gap: 100px;
   }
 }
 
@@ -293,11 +341,11 @@ body {
   max-width: 100%;
   border: 1px solid #F19838;
   border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 @media screen and (min-width: 1000px) {
   .allergens-icons__item {
-    width: 90px;
-    height: 90px;
     border: 2px solid #F19838;
   }
 }
@@ -342,10 +390,10 @@ body {
 @media screen and (min-width: 1000px) {
   .postal-service__content {
     flex-basis: 30%;
+    min-height: 312px;
+    min-width: 464px;
     background-color: #FFF4E5;
-    padding: 0 20px 50px 50px;
-    box-shadow: 2px 2px 4px #e7e7e7;
-    border-radius: 5px 0 5px 40%;
+    padding: 20px;
   }
 }
 .postal-service__title--medium {
@@ -353,6 +401,11 @@ body {
   font-size: 38px;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+@media screen and (min-width: 1000px) {
+  .postal-service__title--medium {
+    margin: 0;
+  }
 }
 .postal-service__photo {
   max-width: 465px;
@@ -421,7 +474,7 @@ body {
 .main-information__title-contact--medium {
   margin-bottom: 15px;
   color: #214C01;
-  font-size: 32px;
+  font-size: 38px;
 }
 
 .contact-icons {
@@ -441,9 +494,9 @@ body {
 }
 
 .google-map {
-  grid-column: 1/8;
-  height: 300px;
+  grid-column: 3/7;
+  height: 450px;
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 0 70px 0;
 }/*# sourceMappingURL=style.css.map */
